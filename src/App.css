@@ -1,38 +1,113 @@
-.App {
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  padding: 20px 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 0 auto;
+  padding: 30px;
+  width: 1200px;
+  background-color:rgba(222, 236, 253, 0.26);
+  overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.valute-list {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid black
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.valute-list__line {
+  border-top: 1px solid gray;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.valute-list__line:first-child {
+  font-weight: 700;
+  background-color:rgb(230, 241, 255);
+  padding: 5px;
+  border: none;
+  cursor: auto;
+}
+.valute-list__line:first-child:hover {
+  background-color:rgb(235, 244, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.valute-list__line--span{
+  width: 110px;
+  display: inline-block;
+  padding: 5px 10px;
 }
+
+.valute-list__line--tooltip {
+  position: absolute;
+  bottom: 0;
+  background-color:white;
+  border: 1px solid gray;
+  padding: 7px 15px;
+  border-radius: 2px;
+  z-index: 10;
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+.valute-list__line:hover {
+  background-color:white;
+}
+
+.valute-list__line:hover .valute-list__line--tooltip{
+  opacity: 1;
+  transform: translateY(40px);
+}
+
+.negative {
+  color: rgb(192, 4, 4);
+}
+.positive {
+  color: rgb(4, 131, 4)
+}
+
+.vlaute-history{
+  display: block;
+  padding: 10px;
+  background-color:rgba(255, 255, 255, 0.582);
+  transition: all .3s;
+}
+
+.vlaute-history__line {
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px dotted rgba(128, 128, 128, 0.336);
+}
+
+.vlaute-history__title {
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+}
+.vlaute-history__line:first-child {
+  font-weight: 500;
+}
+.vlaute-history__span{
+  width: 100px;
+
+}
+.hide {
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  transition: all .3s;
+}
+
