@@ -14,8 +14,7 @@ const ValuteListItem = ({valute, valueHistory}) => {
             onClick={() => setShowHistory(!showHistory)}
             >
                 <span className="valute-list__line--span">{valute.CharCode}</span>
-                <span className="valute-list__line--span"> {valute.Nominal} </span>  
-                <span className="valute-list__line--span"> {valute.Value} </span> 
+                <span className="valute-list__line--span"> {(valute.Value / valute.Nominal).toFixed(4)} </span> 
                 <span 
                 className={(changingProcent > 0 ? " positive" : " negative") + " valute-list__line--span valute-list__line--changing " }> 
                 {changingProcent} %

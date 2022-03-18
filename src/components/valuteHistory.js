@@ -10,7 +10,7 @@ const ValuteHistory = ({charCode, valueHistory, showHistory}) => {
                  {item.Date.slice(0, 10)} 
             </span> 
             <span className="vlaute-history__span">
-                {item.Valute[charCode].Value}
+                {(item.Valute[charCode].Value / item.Valute[charCode].Nominal).toFixed(4)}
             </span>
             </li>
 
