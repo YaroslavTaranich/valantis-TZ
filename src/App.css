@@ -5,13 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 h1 {
   padding: 20px 30px;
   text-align: center;
 }
-
 .container {
   margin: 0 auto;
   padding: 30px;
@@ -33,7 +30,6 @@ h1 {
   position: relative;
   cursor: pointer;
 }
-
 .valute-list__line:first-child {
   font-weight: 700;
   background-color:rgb(230, 241, 255);
@@ -44,13 +40,11 @@ h1 {
 .valute-list__line:first-child:hover {
   background-color:rgb(235, 244, 255);
 }
-
 .valute-list__line--span{
   width: 110px;
   display: inline-block;
   padding: 5px 10px;
 }
-
 .valute-list__line--tooltip {
   position: absolute;
   bottom: 0;
@@ -62,50 +56,49 @@ h1 {
   opacity: 0;
   transition: all .2s ease;
 }
-
 .valute-list__line:hover {
   background-color:white;
 }
-
 .valute-list__line:hover .valute-list__line--tooltip{
   opacity: 1;
   transform: translateY(40px);
 }
-
 .negative {
   color: rgb(192, 4, 4);
 }
 .positive {
   color: rgb(4, 131, 4)
 }
-
-.vlaute-history{
+.valute-history{
   display: block;
   padding: 10px;
   background-color:rgba(255, 255, 255, 0.582);
   transition: all .3s;
 }
-
-.vlaute-history__line {
+.valute-history__line {
   padding: 3px 0;
   display: flex;
   justify-content: space-around;
   border-bottom: 1px dotted rgba(128, 128, 128, 0.336);
+  transition: all .4s ;
 }
-
-.vlaute-history__title {
+.valute-history__title {
   text-align: center;
   padding: 10px;
   font-weight: 500;
 }
-.vlaute-history__line:first-child {
+.valute-history__line:first-of-type {
   font-weight: 500;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.336);
 }
-.vlaute-history__span{
+.valute-history__line:hover {
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+.valute-history__span{
   width: 100px;
-
 }
 .hide {
+  visibility: hidden;
   height: 0;
   opacity: 0;
   padding: 0;
